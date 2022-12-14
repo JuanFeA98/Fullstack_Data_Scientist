@@ -1,3 +1,8 @@
+# Extensions
+*.csv
+*.xlsx
+*.txt
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -7,7 +12,7 @@ __pycache__/
 # C extensions
 *.so
 *.zip
-*.txt
+
 # Distribution / packaging
 .Python
 build/
