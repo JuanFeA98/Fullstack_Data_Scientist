@@ -2,6 +2,8 @@
 *.csv
 *.xlsx
 *.txt
+*.sql
+*.json
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
