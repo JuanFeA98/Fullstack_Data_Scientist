@@ -9,6 +9,15 @@ penguin_color = {
     'Chinstrap': '#829cbc'
 }
 
+def meta_df(df):
+    df_meta = pd.DataFrame(df.columns)
+    df_meta.columns = ['Variable']
+    df_meta['Data_Type'] = df_meta['Variable'].apply(lambda x: str(df[f'{x}'].dtype))
+    df_meta['Valores_Nulos'] = df_meta['Variable'].apply(lambda x: len(df[df[f'{x}'].isna()]))
+    df_meta['Distinct_Values'] = df_meta['Variable'].apply(lambda x: len(df[f'{x}'].value_counts()))
+
+    return df_meta
+    
 def count_valores(df, variable):
     df_count = pd.DataFrame(df[variable].value_counts()).reset_index()
     df_count.columns = [variable, 'penguins']
